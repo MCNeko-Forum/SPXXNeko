@@ -1,11 +1,11 @@
-# SPXXKLP
-SPXXKLP is a Minecraft.net ＆ X.com blog-to-BBCode converter based on SPXX User Script™️，adapted to klpbbs.com in order to make Minecraft news translation easier.
+# SPXXNeko
+SPXXNeko is a Minecraft.net ＆ X.com blog-to-BBCode converter based on SPXX User Script™️，adapted to klpbbs.com in order to make Minecraft news translation easier.
 
-SPXXKLP 是一个基于 SPXX User Script™️ 的 Minecraft.net 、 feedback.minecraft.net 、 help.minecraft net 及 X.com 博文至 BBCode 转换器，进行了一系列修复、完善与调整以便适应 klpbbs.com 的版块规定，令快讯翻译更便捷。
+SPXXNeko 是一个基于 SPXX User Script™️ 的 Minecraft.net 、 feedback.minecraft.net 、 help.minecraft net 及 X.com 博文至 BBCode 转换器，进行了一系列修复、完善与调整以便适应 www.mcneko.com 的版块规定，令快讯翻译更便捷。
 
-SPXXKLP is licensed under MIT.
+SPXXNeko is licensed under MIT.
 
-SPXXKLP 采用 MIT 协议进行授权。
+SPXXNeko 采用 MIT 协议进行授权。
 
 # About SPXX User Script™️
 SPXX is a project which rewrites SPX,focusing on assisting news translaters.
@@ -21,9 +21,9 @@ SPXX project is licensed under [CC0-1.0](https://creativecommons.org/publicdomai
 SPXX 项目使用 CC0-1.0 协议进行授权。
 
 # Contributers
-SPXXKLP is written by Cinder0601 based on SPXX User Script v2.4.14 and SPX.
+SPXXHi is written by MeowcoQAQ based on SPXXKLP User Script v1.0.0 and SPXX User Script v2.4.14 and SPX.
 
-SPXXKLP 由 Cinder0601 基于 SPXX 用户脚本 v2.4.14 及 SPX 进行改写。
+SPXXNeko 由 喵可QAQ 基于 SPXXKLP 用户脚本 v3.2.4 和 SPXX 用户脚本 v2.4.14 及 SPX 进行改写。
 
 Got help from [Redstone-D](https://github.com/Redstone-D) during development.
 
@@ -34,6 +34,10 @@ SPXX Project:https://github.com/SPXFellow/spxx
 
 SPXX 项目地址：https://github.com/SPXFellow/spxx
 
+SPXXKLP Project:https://github.com/cinder0601/SPXXKLP
+
+SPXXKLP 项目地址：https://github.com/cinder0601/SPXXKLP
+
 Sincere thanks to SPGoding and [SPXFellow](https://github.com/SPXFellow) for their tremendous contribution on SPXX™️,you ARE eternal newslords.
 
-衷心感谢 SPGoding 及 [SPXFellow](https://github.com/SPXFellow) 对 SPXX™️ 开发的巨大贡献，你们是永远的纽斯罗德。
+衷心感谢 SPGoding 及 [SPXFellow](https://github.com/SPXFellow) 对 SPXX™️ 开发的巨大贡献，你们是永远的新闻播报员。
