@@ -1,5 +1,5 @@
 # SPXXNeko
-SPXXNeko is a Minecraft.net ＆ X.com blog-to-BBCode converter based on SPXX User Script™️，adapted to klpbbs.com in order to make Minecraft news translation easier.
+SPXXNeko is a Minecraft.net ＆ X.com blog-to-BBCode converter based on SPXX User Script™️，adapted to www.mcneko.com in order to make Minecraft news translation easier.
 
 SPXXNeko 是一个基于 SPXX User Script™️ 的 Minecraft.net 、 feedback.minecraft.net 、 help.minecraft net 及 X.com 博文至 BBCode 转换器，进行了一系列修复、完善与调整以便适应 www.mcneko.com 的版块规定，令快讯翻译更便捷。
 
