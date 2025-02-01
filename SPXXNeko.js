@@ -838,7 +838,7 @@ Converted at ${time.getFullYear()}-${
       const ans = `\n\n${await converters.recurse(
         ele,
         ctx
-      )}\n【本文排版借助了：[url=https://github.com/cinder0601/SPXXNeko][color=#388d40][u]SPXXNeko[/u][/color][/url] 用户脚本 v${SPXXNekoVersion}】\n\n`;
+      )}\n【本文排版借助了：[url=https://github.com/MCNeko-Forum/SPXXNeko][color=#388d40][u]SPXXNeko[/u][/color][/url] 用户脚本 v${SPXXNekoVersion}】\n\n`;
       return ans;
     },
     dd: async (ele, ctx) => {
