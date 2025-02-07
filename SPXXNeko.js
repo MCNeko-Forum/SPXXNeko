@@ -801,9 +801,7 @@ Converted at ${time.getFullYear()}-${
 
         await findSlides(ele);
 
-        /*if (shouldUseAlbum(slides)) {
-          ans = `${prefix}${slides.map(([url, caption]) => `[aimg=${url}]${caption}[/aimg]`).join('\n')}${suffix}`;
-        } else */ if (slides.length > 0) {
+        if (slides.length > 0) {
           ans = `[align=center]${slides
             .map(([url, caption]) => `[img]${url}[/img]\n${caption}`)
             .join("\n")}[/align]\n`;
@@ -812,18 +810,15 @@ Converted at ${time.getFullYear()}-${
         }
       } else if (ele.classList.contains("video")) {
         // Video.
-        ans =
-          "\n[align=center]<无法获取的视频，如有可用视频源，请在此处插入>\n<对于B站视频，可使用 [bilibili] 代码>[/align]\n";
+        ans = "\n[align=center]<无法获取的视频，如有可用视频源，请在此处插入>\n<对于B站视频，可使用 [bilibili] 代码>[/align]\n";
       } else if (
         ele.classList.contains("quote") ||
         ele.classList.contains("attributed-quote")
       ) {
         ans = `\n[quote]\n${ans}\n[/quote]\n`;
       } else if (ele.classList.contains("article-social")) {
-        // End of the content.
         ans = "";
       } else if (ele.classList.contains("modal")) {
-        // Unknown useless content
         ans = "";
       }
 
@@ -1013,14 +1008,7 @@ Converted at ${time.getFullYear()}-${
       const prefix = w && h ? `[img=${w},${h}]` : "[img]";
       const imgUrl = resolveUrl(img.src);
       if (imgUrl === "") return ""; // in case of empty image
-
-      let ans;
-      if (host == "www.minecraft.net") {
-        ans = `[align=center]${prefix}${imgUrl}[/img][/align]\n`; //Left aligning is too ugly.
-      } else {
-        ans = `[align=center]${prefix}${imgUrl}[/img][/align]\n`;
-      }
-
+      let ans = `[align=center]${prefix}${imgUrl}[/img][/align]\n`; //Left aligning is too ugly.
       return ans;
     },
     li: async (ele, ctx) => {
@@ -1614,17 +1602,26 @@ Converted at ${time.getFullYear()}-${
   async function getContent(html, ctx) {
     let results = [];
     let elements = document.querySelectorAll(
-      ".MC_articleGridA_container.MC_articleGridA_grid, .MC_Carousel_track_slide.MC_Theme_Vanilla.MC_Carousel_track_slide__active, .MC_Carousel_track_slide.MC_Theme_Vanilla:not(.MC_Carousel_track_slide__copy)"
+      ".MC_articleGridA_container.MC_articleGridA_grid, .MC_Carousel_track_slide.MC_Theme_Vanilla.MC_Carousel_track_slide__active, .MC_Carousel_track_slide.MC_Theme_Vanilla:not(.MC_Carousel_track_slide__copy), .MC_Carousel_track_slide.MC_Theme_Legends.MC_Carousel_track_slide__active, .MC_Carousel_track_slide.MC_Theme_Legends:not(.MC_Carousel_track_slide__copy)"
     );
     let container = document.createElement("div");
 
     let seenElements = new Set();
 
     Array.from(elements).forEach((element) => {
-      let identifier = element.outerHTML;
+      let identifier = element.querySelector("img")?.src || element.innerHTML;
       if (!seenElements.has(identifier)) {
         seenElements.add(identifier);
-        container.appendChild(element.cloneNode(true)); // cloneNode(true) 深拷贝元素
+        if (element.classList.contains("MC_Carousel_track_slide")) {
+          let mediaDiv = element.querySelector(".MC_Carousel_track_slide_media");
+          if (mediaDiv) {
+            let clonedDiv = document.createElement("div");
+            clonedDiv.appendChild(mediaDiv.cloneNode(true));
+            container.appendChild(clonedDiv);
+          }
+        } else {
+          container.appendChild(element.cloneNode(true));
+        }
       }
     });
 
