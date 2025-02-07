@@ -22,8 +22,8 @@
 // @grant       GM_xmlhttpRequest
 // @grant       GM_registerMenuCommand
 // @license     MIT
-// @downloadURL https://update.greasyfork.org/scripts/521276/SPXXNeko.user.js
-// @updateURL   https://update.greasyfork.org/scripts/521276/SPXXNeko.meta.js
+// @downloadURL https://fastly.jsdelivr.net/gh/MCNeko-Forum/SPXXNeko@main/SPXXNeko.js
+// @updateURL   https://fastly.jsdelivr.net/gh/MCNeko-Forum/SPXXNeko@main/SPXXNeko.js
 // ==/UserScript==
 (function () {
   "use strict";
