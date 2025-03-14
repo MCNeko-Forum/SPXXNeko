@@ -22,8 +22,8 @@
 // @grant       GM_xmlhttpRequest
 // @grant       GM_registerMenuCommand
 // @license     MIT
-// @downloadURL https://fastly.jsdelivr.net/gh/MCNeko-Forum/SPXXNeko@main/SPXXNeko.js
-// @updateURL   https://fastly.jsdelivr.net/gh/MCNeko-Forum/SPXXNeko@main/SPXXNeko.js
+// @downloadURL https://update.greasyfork.org/scripts/521276/SPXXNeko.user.js
+// @updateURL   https://update.greasyfork.org/scripts/521276/SPXXNeko.meta.js
 // ==/UserScript==
 (function () {
   "use strict";
@@ -1416,7 +1416,7 @@ Converted at ${time.getFullYear()}-${
 
       const button = document.createElement("button");
       button.classList.add("SPXXNeko-userscript-ignored");
-      button.innerText = "复制 BBCode";
+      button.innerText = "复制 BBCode (MCNeko)";
       // 按钮样式设置
       button.style.backgroundColor = "#3C8527";
       button.style.color = "#FFFFFF";
@@ -1595,7 +1595,7 @@ Converted at ${time.getFullYear()}-${
       }
     let url = window.location.href;
     let title = await getMainTitle(html);
-    let ans = `\n[float=left][img]${authorImgUrl}[/img][/float]\n\n\n【${translator} 译自[url=${url}][color=#388d40][u]${authorName} ${year} 年 ${month} 月 ${day} 日发布的 ${title}[/u][/color][/url]】[/b]\n【本文排版借助了：[url=https://github.com/cinder0601/SPXXNeko][color=#388d40][u]SPXXNeko[/u][/color][/url] 用户脚本 v${SPXXNekoVersion}】`;
+    let ans = `\n[float=left][img]${authorImgUrl}[/img][/float]\n\n\n【${translator} 译自[url=${url}][color=#388d40][u]${authorName} ${year} 年 ${month} 月 ${day} 日发布的 ${title}[/u][/color][/url]】[/b]\n【本文排版借助了：[url=https://github.com/MCNeko-Forum/SPXXNeko][color=#388d40][u]SPXXNeko[/u][/color][/url] 用户脚本 v${SPXXNekoVersion}】`;
     return ans;
   }
 
@@ -1776,7 +1776,7 @@ Converted at ${time.getFullYear()}-${
       title = title.replace(/\n/g, "");
       bbcode = `[color=#388e3c][size=5]|[/size][/color][size=4]本文内容按照 [/size][url=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans][size=4][color=#2e8b57][u]CC BY-NC-SA 4.0[/u][/color][/size][/url][size=4] 协议进行授权，[b]转载本帖时须注明[color=#ff0000]原作者[/color]以及[color=#ff0000]本帖地址[/color][/b]。[/size][hr]\n[size=6][b][color=silver]${bbcode}[/color][/b][/size][size=6][b]${bbcode}[/b][/size]\n`;
       bbcode += await converthelpElementsToBBCode(content, ctx);
-      bbcode += `[b]【${ctx.translator} 译自[url=${ctx.url}][color=#388d40][u] help.minecraft.net 上的 ${title}[/u][/color][/url]】[/b]\n【本文排版借助了：[url=https://github.com/cinder0601/SPXXNeko][color=#388d40][u]SPXXNeko[/u][/color][/url] 用户脚本 v${version}】\n`;
+      bbcode += `[b]【${ctx.translator} 译自[url=${ctx.url}][color=#388d40][u] help.minecraft.net 上的 ${title}[/u][/color][/url]】[/b]\n【本文排版借助了：[url=https://github.com/MCNeko-Forum/SPXXNeko][color=#388d40][u]SPXXNeko[/u][/color][/url] 用户脚本 v${version}】\n`;
       bbcode += getFooter("INSIDER", VersionType.Normal);
       GM_setClipboard(bbcode, {
         type: "text",
@@ -1829,7 +1829,7 @@ ${translate(
     } ${posted.year} 年 ${posted.month} 月 ${posted.day} 日发布的 ${
       ctx.title
     }[/u][/color][/url]】[/b]
-【本文排版借助了：[url=https://github.com/cinder0601/SPXXNeko][color=#388d40][u]SPXXNeko[/u][/color][/url] 用户脚本 v${SPXXNekoVersion}】\n\n${footer}`;
+【本文排版借助了：[url=https://github.com/MCNeko-Forum/SPXXNeko][color=#388d40][u]SPXXNeko[/u][/color][/url] 用户脚本 v${SPXXNekoVersion}】\n\n${footer}`;
     return ans;
   }
 
